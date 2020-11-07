@@ -62,13 +62,7 @@
 	<div class="col-6 mx-auto" > <!--ГЛАВНЫЙ БЛОК-->
 		<div class="row"> 
 			<!--ЛЕВЫЙ БЛОК. ДИВ ДЛЯ ПОСТОВ-->
-			<div class="col-8 px-0 my-2"> 
-				<form action="change.php" method="GET">
-									<input name="id" class="form-control" placeholder="id">
-									<input name="img" class="form-control" placeholder="img">
-									<input name="text" class="form-control" placeholder="text">
-									<button class="btn btn-primary">change</button>
-				</form>		
+			<div class="col-8 px-0 my-2"> 	
 				<form action="add.php" method="GET">
 									<input name="img" class="form-control" placeholder="img">
 									<input name="text" class="form-control" placeholder="text">
@@ -104,9 +98,11 @@
 						<div>
 							<p>Текст поста
 								<form action="change.php" method="GET">	
-								<input  style="border: none" type="" name="" value="<?php
-								echo $stroka["text"]; ?>">	
-								<button></button>
+								<input  style="border: none" type="" name="text" value="<?php
+								echo $stroka["text"]; ?>">
+								<input  style="border: none;display: none;" type="" name="id" value="<?php
+								 echo $stroka["id"]?>">	
+								<button class='btn btn-primary'>COMMIT CHANGES</button>
 								</form>					
 							</p>
 						</div>
